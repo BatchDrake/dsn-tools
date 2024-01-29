@@ -66,13 +66,14 @@ class Forecast:
       map(
         lambda x: Time(x, format = 'jd', scale = 'utc').to_datetime(),
         eph['datetime_jd'].tolist()))
-
+    
     az   = np.array(eph['AZ'])
     el   = np.array(eph['EL'])
     R    = np.array(eph['r'])
     dRdt = np.array(eph['r_rate'])
-
-    return tt, az, el, R, dRdt
+    vis  = np.array(eph['sat_vis']) == '*'
+    
+    return tt, az, el, R, dRdt, vis
 
 
   
