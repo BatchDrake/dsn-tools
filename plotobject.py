@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 #
 # plotobject.py: Plot a forecast of an object visibility with a day
 # Copyright (c) 2024 Gonzalo José Carracedo Carballal
